@@ -139,11 +139,7 @@ angular.module('angular-input-stars', [])
                     newValue = index + 1;
                 }
 
-                // sets to 0 if the user clicks twice on the first "star"
-                // the user should be allowed to give a 0 score
-                if (newValue === scope.lastValue) {
-                    newValue = 0;
-                }
+                // don't allow user to delete the vote
 
                 scope.lastValue = newValue;
 
